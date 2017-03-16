@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return tasks.count
     }
 
@@ -57,6 +58,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
+    @IBAction func plussTapped(_ sender: Any) {
+        performSegue(withIdentifier: "addSegue", sender: nil)
+    }
     
 }
 
